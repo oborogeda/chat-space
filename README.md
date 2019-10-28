@@ -11,7 +11,7 @@
 - has_many :groups, through: :groups_users
 - has_many :groups
 
-## groupsテーブル　テスト
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
