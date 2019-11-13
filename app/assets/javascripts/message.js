@@ -1,6 +1,7 @@
 $(function(){
   function buildHTML(message){
     var img = message.image ? `<img src=${message.image}>` : "";
+    
      var html =
       `<div class="message" data-id=${message.id}>
          <div class="upper-message">
@@ -18,6 +19,7 @@ $(function(){
          </div>
          ${img}
        </div>`
+       console.log(html)
      return html;
  }
 $('#new_message').on('submit', function(e){
@@ -33,6 +35,7 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(data){
+    console.log(data)
     var html = buildHTML(data);
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
